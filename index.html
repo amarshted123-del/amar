@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="الصفحة الرسمية لـ TEAM ABN - قناة تليجرام وطرق التواصل مع المطور"/>
   <meta name="theme-color" content="#0f0f17"/>
-  <meta name="color-scheme" content="dark light"/>
+  <meta name="color-scheme" content="dark"/>
 
   <title>TEAM ABN | الصفحة الرسمية</title>
 
@@ -55,24 +55,9 @@
       --radius-lg:       24px;
 
       --transition:      all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-    }
 
-    [data-theme="light"] {
-      --bg-primary:      #f8fafc;
-      --bg-secondary:    #f1f5f9;
-      --bg-card:         #ffffff;
-      --bg-card-hover:   #f8fafc;
-
-      --text-primary:    #0f172a;
-      --text-secondary:  #334155;
-      --text-muted:      #64748b;
-
-      --accent:          #006699;
-      --accent-hover:    #0077b3;
-      --accent-active:   #005588;
-
-      --border:          #e2e8f0;
-      --border-focus:    #3b82f6;
+      --progress-bg:     #2a2a45;
+      --progress-fill:   linear-gradient(90deg, #0088cc, #25D366, #ff4d4d); /* RGB gradient: blue-green-red */
     }
 
     /***************************************
@@ -265,70 +250,39 @@
     }
 
     /***************************************
-     *            Countdown Overlay        *
+     *            Progress Bar             *
      ***************************************/
-    #countdown-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(10,10,20,0.96);
-      backdrop-filter: blur(10px);
+    .progress-container {
       display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      color: white;
+      margin-top: 12px;
+      text-align: center;
     }
 
-    .countdown-number {
-      font-size: 8rem;
-      font-weight: 800;
-      line-height: 0.9;
-      background: linear-gradient(90deg, #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--progress-bg);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
     }
 
-    .countdown-text {
-      margin-top: 24px;
-      font-size: 1.6rem;
-      color: #c7d2fe;
-      opacity: 0.9;
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      background: var(--progress-fill);
+      transition: width 15s linear;
+    }
+
+    .progress-text {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
     }
 
     /***************************************
-     *           Theme Toggle + Footer     *
+     *           Ads & Footer              *
      ***************************************/
-    .theme-toggle {
-      position: fixed;
-      top: 16px;
-      left: 16px;
-      z-index: 100;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.1);
-      border-color: var(--accent);
-    }
-
-    footer {
-      padding: 40px 20px 60px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      border-top: 1px solid var(--border);
-      margin-top: auto;
-    }
-
     .ads-container {
       width: 100%;
       max-width: 520px;
@@ -342,9 +296,17 @@
       display: block;
     }
 
+    footer {
+      padding: 40px 20px 60px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+
     @media (max-width: 480px) {
       .logo        { font-size: 3.2rem; }
-      .countdown-number { font-size: 6.5rem; }
       .card        { padding: 24px 18px; }
       .btn         { padding: 14px 20px; font-size: 1.02rem; }
     }
@@ -357,14 +319,9 @@
     }
   </style>
 </head>
-<body data-theme="dark">
+<body>
 
   <div class="page-wrapper">
-
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" aria-label="تبديل الوضع الليلي/النهاري" id="themeToggle">
-      <i class="fas fa-moon"></i>
-    </button>
 
     <!-- إعلان علوي -->
     <div class="ads-container">
@@ -393,10 +350,16 @@
           <i class="fab fa-telegram-plane"></i>
           القناة الرسمية
         </h2>
-        <button class="btn tg" data-url="https://t.me/ABN_MOD" aria-label="الانضمام إلى قناة تليجرام">
+        <button class="btn tg" data-deep="tg://resolve/?domain=ABN_MOD" data-fallback="https://t.me/ABN_MOD" aria-label="الانضمام إلى قناة تليجرام">
           <i class="fab fa-telegram-plane"></i>
           الانضمام إلى القناة
         </button>
+        <div class="progress-container" id="progress-channel">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-text">جاري التحويل...</p>
+        </div>
       </section>
 
       <!-- قسم التواصل -->
@@ -405,14 +368,26 @@
           <i class="fas fa-headset"></i>
           تواصل مع المطور
         </h2>
-        <button class="btn tg" data-url="https://t.me/ABN_AM_Ar" aria-label="مراسلة على تليجرام">
+        <button class="btn tg" data-deep="tg://resolve/?domain=ABN_AM_Ar" data-fallback="https://t.me/ABN_AM_Ar" aria-label="مراسلة على تليجرام">
           <i class="fab fa-telegram-plane"></i>
           تليجرام
         </button>
-        <button class="btn whatsapp" data-url="https://wa.me/963982718857" aria-label="مراسلة على واتساب">
+        <div class="progress-container" id="progress-tg">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-text">جاري التحويل...</p>
+        </div>
+        <button class="btn whatsapp" data-deep="whatsapp://send?phone=963982718857" data-fallback="https://wa.me/963982718857" aria-label="مراسلة على واتساب">
           <i class="fab fa-whatsapp"></i>
           واتساب
         </button>
+        <div class="progress-container" id="progress-wa">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-text">جاري التحويل...</p>
+        </div>
       </section>
 
     </main>
@@ -440,88 +415,38 @@
 
   </div>
 
-  <!-- Countdown Overlay -->
-  <div id="countdown-overlay">
-    <div class="countdown-number" id="countdownNumber">15</div>
-    <div class="countdown-text">جاري التحويل...</div>
-  </div>
-
   <script>
     // ────────────────────────────────────────────────
-    // Theme Toggle
+    // Progress Bar Logic for Each Button
     // ────────────────────────────────────────────────
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-
-    function setTheme(theme) {
-      html.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      themeToggle.innerHTML = theme === 'dark'
-        ? '<i class="fas fa-moon"></i>'
-        : '<i class="fas fa-sun"></i>';
-    }
-
-    const savedTheme = localStorage.getItem('theme') ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-    setTheme(savedTheme);
-
-    themeToggle.addEventListener('click', () => {
-      const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      setTheme(newTheme);
-    });
-
-    // ────────────────────────────────────────────────
-    // Countdown Logic
-    // ────────────────────────────────────────────────
-    const countdownOverlay = document.getElementById('countdown-overlay');
-    const countdownNumber = document.getElementById('countdownNumber');
-    let countdownTimer;
-
-    function startCountdown(url) {
-      let seconds = 15;
-      countdownNumber.textContent = seconds;
-      countdownOverlay.style.display = 'flex';
-
-      countdownTimer = setInterval(() => {
-        seconds--;
-        countdownNumber.textContent = seconds;
-
-        if (seconds <= 0) {
-          clearInterval(countdownTimer);
-          window.location.href = url;
-        }
-      }, 1000);
-    }
-
-    // Cancel countdown if user navigates away
-    window.addEventListener('beforeunload', () => {
-      clearInterval(countdownTimer);
-    });
-
-    // All redirect buttons
-    document.querySelectorAll('[data-url]').forEach(btn => {
+    document.querySelectorAll('.btn[data-deep]').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        const url = this.getAttribute('data-url');
+        const deepLink = this.getAttribute('data-deep');
+        const fallback = this.getAttribute('data-fallback');
+        const progressId = this.nextElementSibling.id; // Assuming progress is right after button
 
-        if (!url) return;
-
-        // Optional: disable button during countdown
+        // Disable button
         this.disabled = true;
-        setTimeout(() => { this.disabled = false; }, 16000);
 
-        startCountdown(url);
+        // Show progress bar
+        const progressContainer = document.getElementById(progressId);
+        progressContainer.style.display = 'block';
+
+        const progressFill = progressContainer.querySelector('.progress-fill');
+        progressFill.style.width = '100%'; // Start animation
+
+        // After 15 seconds, attempt deep link
+        setTimeout(() => {
+          // Try deep link (opens app if installed)
+          window.location.href = deepLink;
+
+          // Fallback to web after 2 seconds if deep link fails (optional timeout)
+          setTimeout(() => {
+            window.location.href = fallback;
+          }, 2000);
+        }, 15000);
       });
-    });
-
-    // Prevent closing overlay by mistake (optional)
-    countdownOverlay.addEventListener('click', e => {
-      if (e.target === countdownOverlay) {
-        // You can decide to cancel or keep it
-        // countdownOverlay.style.display = 'none';
-        // clearInterval(countdownTimer);
-      }
     });
   </script>
 </body>
