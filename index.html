@@ -3,44 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي - الخطوة الأولى</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TEAM ABN - الصفحة الرسمية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* تنسيقات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #0088cc;
+            --secondary-color: #25D366;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --border-radius: 12px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            background-color: #f5f7fa;
+            color: var(--dark-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* إعلان الرأس */
+        .header-ad {
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
+        /* الهيدر الرئيسي */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #005580);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 136, 204, 0.2);
         }
-        h1 { color: #333; }
-        h2 { color: #555; }
-        .features {
-            text-align: right;
-            margin-right: 20px;
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            color: #ffcc00;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* المحتوى الرئيسي */
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .card-title i {
+            font-size: 1.8rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            min-width: 200px;
+            margin: 5px;
+        }
+        
+        .btn-telegram {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+        
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* مؤقت العد التنازلي */
+        .timer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+        
+        .timer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .timer-box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .timer-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .timer-text {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--dark-color);
+        }
+        
+        .timer {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-family: monospace;
+        }
+        
+        .timer-progress {
+            width: 100%;
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .timer-progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), #25D366);
+            width: 0%;
+            transition: width 1s linear;
+        }
+        
+        .cancel-btn {
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+            border: 1px solid #dee2e6;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .cancel-btn:hover {
+            background-color: #e9ecef;
+        }
+        
+        /* تخصيص للأزرار */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        /* إعلان الفوتر */
+        .footer-ad {
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* الفوتر */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .btn {
+                min-width: 180px;
+                padding: 12px 20px;
+            }
+            
+            .timer-box {
+                padding: 30px 20px;
+            }
+            
+            .timer {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .timer {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>الخطوة 1 من 4: ترحيب</h1>
-        <h2>ما هو هذا الموقع؟</h2>
-        <p>هذا موقع تجريبي لشرح كيفية بناء موقع مشابه لموقع shortlinks.</p>
-        <h2>المميزات</h2>
-        <ul class="features">
-            <li>واجهة بسيطة وواضحة</li>
-            <li>يدعم اللغة العربية</li>
-            <li>يعمل على جميع الأجهزة</li>
-        </ul>
-        <button onclick="alert('تم التأكيد!')">⚠️ تأكيد المتابعة</button>
+    <!-- إعلان الرأس -->
+    <div class="header-ad container">
+        <div id="header-ad-container">
+            <!-- سيتم إدراج الإعلان هنا عبر JavaScript -->
+        </div>
     </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-users"></i>
+                <span>TEAM ABN</span>
+            </div>
+            <h1>اهلاً بك في صفحتي الرسمية</h1>
+            <p>مرحباً بكم في المنصة الرسمية لفريق ABN، يمكنكم متابعة قناتنا على تلغرام والاتصال بنا للاستفسار أو المساعدة</p>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <div class="container">
+            <!-- النافذة الأولى: قناة التلجرام -->
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fab fa-telegram"></i>
+                    قناتي الرسمية على منصة تلغرام
+                </h2>
+                <p>تابع آخر تحديثاتنا وأخبارنا عبر قناتنا الرسمية على تلغرام. نحن ننشر محتوى حصري ودروس مفيدة لمساعدتك في تحقيق أهدافك.</p>
+                <div class="buttons-container">
+                    <button class="btn btn-telegram" id="telegram-channel-btn">
+                        <i class="fab fa-telegram"></i>
+                        الانتقال إلى القناة
+                    </button>
+                </div>
+            </div>
+
+            <!-- النافذة الثانية: التواصل -->
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-headset"></i>
+                    التواصل مع المطور للاستفسار أو المساعدة
+                </h2>
+                <p>لديك استفسار أو تحتاج إلى مساعدة؟ يمكنك التواصل معنا مباشرة عبر تلغرام أو واتساب. نحن هنا لمساعدتك في أي وقت.</p>
+                <div class="buttons-container">
+                    <button class="btn btn-telegram" id="telegram-contact-btn">
+                        <i class="fab fa-telegram"></i>
+                        تواصل عبر تلغرام
+                    </button>
+                    <button class="btn btn-whatsapp" id="whatsapp-contact-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل عبر واتساب
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- إعلان الفوتر -->
+    <div class="footer-ad container">
+        <div id="footer-ad-container">
+            <!-- سيتم إدراج الإعلان هنا عبر JavaScript -->
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2023 TEAM ABN</p>
+            <p>تم التصميم والتطوير بواسطة فريق ABN</p>
+        </div>
+    </footer>
+
+    <!-- نافذة مؤقت العد التنازلي -->
+    <div class="timer-overlay" id="timerOverlay">
+        <div class="timer-box">
+            <div class="timer-icon">
+                <i class="fas fa-hourglass-half"></i>
+            </div>
+            <div class="timer-text" id="timerText">جاري تحويلك إلى المنصة المطلوبة، الرجاء الانتظار</div>
+            <div class="timer" id="timer">15</div>
+            <div class="timer-progress">
+                <div class="timer-progress-bar" id="timerProgressBar"></div>
+            </div>
+            <button class="cancel-btn" id="cancelTimerBtn">إلغاء التحويل</button>
+        </div>
+    </div>
+
+    <!-- أكواد الإعلانات -->
+    <script>
+        // كود الإعلان الأول (الرأس)
+        document.getElementById('header-ad-container').innerHTML = `
+            <script>
+                atOptions = {
+                    'key' : '75cd5e90b6fd55d5ddca93d86a7dd4fb',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                };
+            <\/script>
+            <script src="https://arableillnesspersonnel.com/75cd5e90b6fd55d5ddca93d86a7dd4fb/invoke.js"><\/script>
+        `;
+        
+        // كود الإعلان الثاني (الفوتر)
+        document.getElementById('footer-ad-container').innerHTML = `
+            <script>
+                atOptions = {
+                    'key' : '071934287950dfd7635ecb479197b7f8',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            <\/script>
+            <script src="https://arableillnesspersonnel.com/071934287950dfd7635ecb479197b7f8/invoke.js"><\/script>
+        `;
+    </script>
+
+    <script>
+        // بيانات الروابط
+        const links = {
+            telegramChannel: 'https://t.me/ABN_MOD',
+            telegramContact: 'https://t.me/ABN_AM_Ar',
+            whatsappContact: 'https://wa.me/963982718857'
+        };
+
+        // متغيرات العد التنازلي
+        let countdownTimer;
+        let countdownValue = 15;
+        let targetUrl = '';
+        let timerActive = false;
+
+        // عناصر واجهة المستخدم
+        const timerOverlay = document.getElementById('timerOverlay');
+        const timerElement = document.getElementById('timer');
+        const timerProgressBar = document.getElementById('timerProgressBar');
+        const timerText = document.getElementById('timerText');
+        const cancelTimerBtn = document.getElementById('cancelTimerBtn');
+
+        // عناصر الأزرار
+        const telegramChannelBtn = document.getElementById('telegram-channel-btn');
+        const telegramContactBtn = document.getElementById('telegram-contact-btn');
+        const whatsappContactBtn = document.getElementById('whatsapp-contact-btn');
+
+        // دالة لبدء العد التنازلي
+        function startCountdown(url, platformName) {
+            if (timerActive) return;
+            
+            timerActive = true;
+            targetUrl = url;
+            countdownValue = 15;
+            
+            // تحديث نص المؤقت
+            timerText.textContent = `جاري تحويلك إلى ${platformName}، الرجاء الانتظار`;
+            
+            // إعادة تعيين المؤقت والشريط
+            timerElement.textContent = countdownValue;
+            timerProgressBar.style.width = '0%';
+            
+            // إظهار نافذة المؤقت
+            timerOverlay.classList.add('active');
+            
+            // بدء العد التنازلي
+            countdownTimer = setInterval(() => {
+                countdownValue--;
+                timerElement.textContent = countdownValue;
+                
+                // تحديث شريط التقدم
+                const progress = 100 - (countdownValue / 15) * 100;
+                timerProgressBar.style.width = `${progress}%`;
+                
+                // عندما يصل المؤقت إلى الصفر
+                if (countdownValue <= 0) {
+                    clearInterval(countdownTimer);
+                    timerActive = false;
+                    timerOverlay.classList.remove('active');
+                    window.open(targetUrl, '_blank');
+                }
+            }, 1000);
+        }
+
+        // دالة لإيقاف المؤقت
+        function cancelCountdown() {
+            clearInterval(countdownTimer);
+            timerActive = false;
+            timerOverlay.classList.remove('active');
+        }
+
+        // إضافة مستمعي الأحداث للأزرار
+        telegramChannelBtn.addEventListener('click', () => {
+            startCountdown(links.telegramChannel, 'قناة تلغرام');
+        });
+        
+        telegramContactBtn.addEventListener('click', () => {
+            startCountdown(links.telegramContact, 'تلغرام المطور');
+        });
+        
+        whatsappContactBtn.addEventListener('click', () => {
+            startCountdown(links.whatsappContact, 'واتساب المطور');
+        });
+        
+        cancelTimerBtn.addEventListener('click', cancelCountdown);
+        
+        // إغلاق المؤتمر عند النقر خارج الصندوق (اختياري)
+        timerOverlay.addEventListener('click', (e) => {
+            if (e.target === timerOverlay) {
+                cancelCountdown();
+            }
+        });
+
+        // تهيئة إعلانات الرأس والفوتر بعد تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // إعادة تحميل الإعلانات بعد فترة قصيرة للتأكد من ظهورها
+            setTimeout(() => {
+                const headerAdContainer = document.getElementById('header-ad-container');
+                const footerAdContainer = document.getElementById('footer-ad-container');
+                
+                // إعادة تعيين المحتوى لإعادة تحميل الإعلانات
+                headerAdContainer.innerHTML = headerAdContainer.innerHTML;
+                footerAdContainer.innerHTML = footerAdContainer.innerHTML;
+            }, 500);
+        });
+    </script>
 </body>
 </html>
