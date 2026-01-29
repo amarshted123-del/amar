@@ -1,453 +1,1736 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="الصفحة الرسمية لـ TEAM ABN - قناة تليجرام وطرق التواصل مع المطور"/>
-  <meta name="theme-color" content="#0f0f17"/>
-  <meta name="color-scheme" content="dark"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2712825263997446"
+     crossorigin="anonymous"></script>
+    <meta name="kadam-verification" content="kadamdb8d8afe49f3bdd087d0bebedbe688a6" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadowGamer100k - Minecraft Add-ons</title>
+    <meta name="description" content="Visit shadowGamer100k for the latest Minecraft add-ons, mods, and resources to enhance your gaming experience.">
+    <meta name="keywords" content="Minecraft, add-ons, mods, resources, shadowGamer100k, Bedrock">
+    <meta name="author" content="shadowGamer100k">
+    <link rel="icon" href="assets/images/avatarHead3.png" type="image/x-icon">
+    
+    <!-- EXTERNAL LIBS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- ANALYTICS -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M2P94THH');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTG6N0GFN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JKTG6N0GFN');
+    </script>
+    
+    <style>
+        /* ==================== CORE FONTS & VARIABLES ==================== */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        :root {
+            --mc-green: #55ff55;
+            --mc-blue: #55aaff;
+            --mc-dark: #2d2d2d;
+            --mc-border: #555;
+            --mc-gold: #ffaa00;
+            --bg-color: #313131;
+            --text-color: white;
+        }
 
-  <title>TEAM ABN | الصفحة الرسمية</title>
+        /* ==================== BIOME THEMES ==================== */
+        body.theme-nether {
+            --mc-green: #ff5555;
+            --mc-blue: #ffaa00;
+            --mc-dark: #3d1a1a;
+            --bg-color: #250505;
+            --mc-border: #8e4040;
+            --mc-gold: #ffe6a0;
+        }
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="TEAM ABN - الصفحة الرسمية"/>
-  <meta property="og:description" content="انضم إلى قناتنا الرسمية على تليجرام وتواصل مع المطور"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://amarshted123-del.github.io/amar/"/>
-  <meta property="og:image" content="https://via.placeholder.com/1200x630/161624/0088cc?text=TEAM+ABN"/>
+        body.theme-end {
+            --mc-green: #d855ff;
+            --mc-blue: #55ffff;
+            --mc-dark: #20102e;
+            --bg-color: #12061f;
+            --mc-border: #683e8c;
+            --mc-gold: #e0ffaa;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+        /* ==================== CUSTOM CURSORS ==================== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', cursive;
+            overflow-x: hidden;
+            background-color: #111;
+            cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="14" width="4" height="4" fill="white" stroke="black" stroke-width="1"/><rect x="14" y="0" width="4" height="14" fill="rgba(255,255,255,0.8)" stroke="black" stroke-width="1"/><rect x="14" y="18" width="4" height="14" fill="rgba(255,255,255,0.8)" stroke="black" stroke-width="1"/><rect x="0" y="14" width="14" height="4" fill="rgba(255,255,255,0.8)" stroke="black" stroke-width="1"/><rect x="18" y="14" width="14" height="4" fill="rgba(255,255,255,0.8)" stroke="black" stroke-width="1"/></svg>') 16 16, crosshair;
+        }
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        a, button, .pointer, .nav-item, .nav-icon, .featured-item, .mod-item, .star-btn, .sort-button, .custom-select-trigger, .custom-option, .game-btn-link, .mobile-menu-item, #biomeToggle, #menuTrigger, .feedback-btn, .feedback-close, .feedback-submit, .search-result-item {
+            cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" transform="rotate(-0)"><path d="M22 2 L24 4 L22 6 L24 8 L22 10 L24 12 L14 22 L12 20 L22 10 L20 8 L22 6 L20 4 L22 2 Z" fill="%2355ffff" stroke="black" stroke-width="1"/><rect x="10" y="20" width="4" height="4" fill="%23222" stroke="black" stroke-width="1"/><rect x="6" y="24" width="4" height="4" fill="%23654321" stroke="black" stroke-width="1"/></svg>') 0 0, pointer;
+        }
 
-  <style>
-    /***************************************
-     *           CSS Variables             *
-     ***************************************/
-    :root {
-      --bg-primary:      #0a0a14;
-      --bg-secondary:    #11111f;
-      --bg-card:         #161624;
-      --bg-card-hover:   #1e1e38;
+        /* ==================== GLOBAL STYLES ==================== */
+        #main-wrapper {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+            background-size: 30px 30px;
+            background-position: -5px -5px;
+            color: var(--text-color);
+            text-align: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 100%;
+            transition: background-color 0.5s ease, color 0.3s ease, transform 1s ease, filter 0.5s ease;
+            position: relative;
+        }
 
-      --text-primary:    #e5e7ff;
-      --text-secondary:  #a5b4fc;
-      --text-muted:      #6b7280;
+        h1 { font-size: 2em; margin: 20px 0; }
+        a { text-decoration: none; color: inherit; }
+        
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 15px;
+            padding-bottom: 80px;
+        }
 
-      --accent:          #0088cc;
-      --accent-hover:    #00aaff;
-      --accent-active:   #006699;
+        /* ==================== SPLASH TEXT ==================== */
+        .splash-text {
+            position: absolute;
+            top: -10px;
+            right: -140px;
+            color: #ffff55;
+            font-size: 10px;
+            transform: rotate(-20deg);
+            text-shadow: 2px 2px 0 #3f3f15;
+            animation: splashBounce 0.8s infinite alternate;
+            width: 150px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 10;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.4;
+        }
 
-      --whatsapp:        #25D366;
-      --whatsapp-hover:  #20b358;
+        @keyframes splashBounce {
+            from { transform: rotate(-20deg) scale(1); }
+            to { transform: rotate(-20deg) scale(1.1); }
+        }
 
-      --border:          #2a2a45;
-      --border-focus:    #4a5aff;
+        /* ==================== WEATHER EFFECTS ==================== */
+        .weather-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            display: none;
+        }
 
-      --shadow-sm:       0 4px 12px rgba(0,0,0,0.35);
-      --shadow-md:       0 10px 30px rgba(0,0,0,0.45);
-      --shadow-lg:       0 20px 50px rgba(0,0,0,0.6);
+        .weather-rain {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWEft1rsNhDAMRNH7s46ACmiJjigC6iCjZ0ZCgOAZ37rwd2S/tDsHB0J+HAgJ+XEgJOTHgZCQHwdCQn4cCAq5e6x51ly7x5pT597/AQ4E/T4OhIQcCAk5EBJyICTkQEjIgZCQAyEhB0JCDhwI+X8c+AGuWyJ/y+u2EAAAAABJRU5ErkJggg==');
+            animation: rainFall 0.5s linear infinite;
+            opacity: 0.3;
+        }
+        @keyframes rainFall { from { background-position: 0 0; } to { background-position: 0 32px; } }
 
-      --radius-sm:       8px;
-      --radius-md:       16px;
-      --radius-lg:       24px;
+        .weather-ash {
+            background-image: 
+                radial-gradient(circle, #888 1px, transparent 1.5px),
+                radial-gradient(circle, #555 1px, transparent 1.5px);
+            background-size: 40px 40px, 60px 60px;
+            background-position: 0 0, 20px 20px;
+            animation: ashRise 8s linear infinite;
+            opacity: 0.5;
+        }
+        @keyframes ashRise { from { background-position: 0 0, 20px 20px; } to { background-position: -20px -40px, 0px -20px; } }
 
-      --transition:      all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+        .weather-end {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38gYGAEESAAEGAAasgJOgzOKCoAAAAASUVORK5CYII=');
+            background-size: 64px 64px;
+            opacity: 0.05;
+            filter: sepia(100%) hue-rotate(240deg) saturate(300%);
+            animation: staticShift 0.2s steps(4) infinite;
+        }
+        @keyframes staticShift { 
+            0% { background-position: 0 0; } 
+            25% { background-position: 4px 0; }
+            50% { background-position: 0 4px; }
+            75% { background-position: 4px 4px; }
+            100% { background-position: 0 0; } 
+        }
 
-      --progress-bg:     #2a2a45;
-      --progress-fill:   linear-gradient(90deg, #0088cc, #25D366, #ff4d4d); /* RGB gradient: blue-green-red */
-    }
+        /* ==================== CLICK PARTICLES ==================== */
+        .click-particle {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background-color: var(--mc-border);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+        }
 
-    /***************************************
-     *             Reset & Base            *
-     ***************************************/
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        /* ==================== NAVIGATION ==================== */
+        .minecraft-navbar {
+            display: flex; justify-content: space-between; align-items: center; background-color: #2c2c2c;
+            padding: 10px 15px; margin: 20px auto; border: 2px solid #555; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 4px; max-width: 95%; position: relative;
+        }
+        .navbar-logo { display: flex; align-items: center; cursor: pointer; user-select: none; position: relative; }
+        .nav-logo { width: 36px; height: 36px; margin-right: 10px; image-rendering: pixelated; }
+        .logo-text { font-size: 1.2rem; text-shadow: 2px 2px 0px #000; }
+        .navbar-menu, .mobile-nav-icons { display: flex; gap: 10px; }
+        .mobile-nav-icons { display: none; }
+        .nav-item, .nav-icon {
+            background-color: #3a3a3a; color: #fff; border: 2px solid #555; padding: 8px 16px;
+            cursor: pointer; text-transform: uppercase; transition: all 0.3s ease;
+            font-family: 'Press Start 2P', cursive; font-size: 14px;
+            display: inline-flex; align-items: center; justify-content: center; /* Ensures buttons and links align */
+            text-decoration: none;
+        }
+        .nav-icon { width: 40px; height: 40px; padding: 8px; display: flex; align-items: center; justify-content: center; }
+        .nav-item.active, .nav-icon.active { background-color: #555; border-color: #7e7e7e; box-shadow: 0 0 5px rgba(255,255,255,0.3); }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        /* ==================== SEARCH & FILTERS ==================== */
+        .search-container { max-width: 95%; margin: 0 auto 10px; padding: 0 15px; position: relative; }
+        .search-box {
+            display: flex; align-items: center; background-color: #2c2c2c; border: 2px solid #555;
+            border-radius: 8px; padding: 12px 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;
+        }
+        .search-box:focus-within { border-color: #7e7e7e; }
+        .search-icon { color: #888; margin-right: 12px; }
+        
+        .search-input { 
+            flex: 1; 
+            background: transparent; 
+            border: none; 
+            color: #fff; 
+            font-size: 12px; 
+            outline: none; 
+            font-family: 'Press Start 2P', cursive; 
+            line-height: 1.5;
+        }
+        .search-input::placeholder { color: #888; opacity: 1; }
+        
+        .clear-search { background: #444; border: none; color: #fff; padding: 6px 10px; border-radius: 4px; cursor: pointer; display: none; }
+        
+        /* --- NEW: FIXED SEARCH RESULTS STYLING --- */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 15px; /* Matches padding of container */
+            right: 15px; /* Matches padding of container */
+            background: #2c2c2c;
+            border: 2px solid #555;
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            margin-top: 2px;
+        }
 
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      min-height: 100dvh;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+        .search-results.active {
+            display: block;
+        }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
+        .search-result-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: left; /* Ensure text aligns left in dropdown */
+        }
 
-    /***************************************
-     *              Layout                 *
-     ***************************************/
-    .page-wrapper {
-      display: flex;
-      flex-direction: column;
-      min-height: 100dvh;
-    }
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
 
-    .main-content {
-      flex: 1;
-      width: 100%;
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 16px;
-    }
+        .search-result-item:hover {
+            background: #3a3a3a;
+        }
 
-    /***************************************
-     *               Header                *
-     ***************************************/
-    .header {
-      text-align: center;
-      padding: 48px 0 32px;
-      position: relative;
-    }
+        .search-result-img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 15px;
+            border: 2px solid #444;
+            background: #111;
+        }
 
-    .header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 20%, rgba(0,136,204,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
+        .search-result-info {
+            flex: 1;
+        }
 
-    .logo {
-      font-size: 3.8rem;
-      font-weight: 800;
-      background: linear-gradient(90deg, #60a5fa, #a78bfa, #c084fc);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -1px;
-      margin-bottom: 8px;
-    }
+        .search-result-info h4 {
+            margin: 0 0 5px 0;
+            color: var(--mc-green);
+            font-size: 12px;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.4;
+        }
 
-    .tagline {
-      font-size: 1.18rem;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
+        .search-result-info p {
+            margin: 0;
+            color: #ccc;
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
-    /***************************************
-     *               Cards                 *
-     ***************************************/
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
-      margin: 24px 0;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
+        .no-results {
+            padding: 20px;
+            color: #888;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            text-align: center;
+        }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
+        /* --- FILTER LAYOUT WITH GAME BUTTON --- */
+        .filter-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            max-width: 95%; 
+            margin: 15px auto 20px; 
+            padding: 0 15px; 
+        }
+        
+        .game-btn-link {
+            background-color: #3a3a3a;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 2px solid #555;
+            font-size: 12px;
+            font-family: 'Press Start 2P', cursive;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: none;
+        }
+        
+        .game-btn-link:hover {
+            transform: translateY(-2px);
+            background-color: #444;
+        }
+        
+        .game-btn-link:active {
+            transform: translateY(2px);
+        }
 
-    .card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent 40%, rgba(0,136,204,0.06) 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
+        .sort-dropdown { position: relative; display: inline-block; }
+        .sort-button { background: #3a3a3a; color: #fff; border: 2px solid #555; padding: 8px 16px; cursor: pointer; font-size: 12px; font-family: 'Press Start 2P', cursive; display: flex; align-items: center; gap: 8px; }
+        .sort-options { display: none; position: absolute; right: 0; top: 100%; background: #2c2c2c; border: 2px solid #555; z-index: 50; min-width: 150px; }
+        .sort-options.show { display: block; }
+        .sort-option { padding: 10px 15px; cursor: pointer; font-size: 12px; font-family: Arial, sans-serif; border-bottom: 1px solid #333; text-align: left; }
+        .sort-option:hover { background-color: #444; color: var(--mc-green); }
 
-    .card:hover::before {
-      opacity: 1;
-    }
+        /* ==================== MOD LIST ==================== */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .mod-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0; margin-top: 20px; list-style: none; }
+        .mod-item {
+            background: #333; padding: 15px; border-radius: 5px; width: 100%; box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5); text-align: left; border: 2px solid #555; position: relative;
+            transition: transform 0.2s; display: flex; flex-direction: column;
+        }
+        .mod-item:hover { transform: translateY(-5px); background-color: #3a3a3a; }
+        .mod-item img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 5px; border: 2px solid #222; }
+        .mod-item h3 { font-size: 14px; margin: 10px 0; color: var(--mc-green); line-height: 1.4; }
+        .mod-item p { font-size: 12px; line-height: 1.5; color: #ccc; flex-grow: 1; margin-bottom: 15px; }
+        .version-badge, .news-badge, .social-badge { background: #555; padding: 2px 5px; border-radius: 3px; font-size: 9px; margin-left: 5px; vertical-align: middle; color: white; }
+        .news-badge { background: #aa55ff; }
+        .social-badge { background: var(--mc-blue); }
+        .rating-container { display: flex; align-items: center; margin-bottom: 10px; background: rgba(0, 0, 0, 0.2); padding: 5px; border-radius: 4px; }
+        .stars-wrapper { display: flex; flex-direction: row-reverse; margin-right: 8px; }
+        .star-btn { font-size: 16px; color: #555; cursor: pointer; transition: color 0.2s; padding: 0 2px; }
+        .star-btn:hover, .star-btn:hover ~ .star-btn { color: #ffe600; }
+        .star-btn.active { color: var(--mc-gold); }
+        .rating-score { font-family: Arial, sans-serif; font-size: 11px; color: #aaa; }
+        .action-buttons { display: flex; gap: 10px; margin-top: auto; width: 100%; }
+        .social-link, button, .download-button, .close-button, .feedback-button { font-family: 'Press Start 2P', cursive; display: inline-block; text-decoration: none; font-size: 12px; transition: all 0.3s; }
+        .mod-item .social-link { display: block; text-align: center; padding: 10px; background: #222; border: 2px solid #444; color: white; flex-grow: 1; color: var(--mc-blue); }
+        .mod-item .social-link:hover { background: var(--mc-green); color: black; text-decoration: none; transform: none; border-color: var(--mc-green); }
+        .feedback-button { display: flex; justify-content: center; align-items: center; width: 45px; background: #222; border: 2px solid #444; color: #ffaa00; cursor: pointer; }
+        .feedback-button:hover { background: #ffaa00; color: #222; border-color: #ffaa00; }
 
-    .card-title {
-      font-size: 1.38rem;
-      font-weight: 700;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        /* FEEDBACK BUTTON STYLE */
+        .feedback-btn {
+            width: 42px; /* Matches standard button height approx */
+            background: #222;
+            border: 2px solid #444;
+            color: #ffaa00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .feedback-btn:hover {
+            background: #ffaa00;
+            color: #222;
+            border-color: #ffaa00;
+        }
 
-    .card-title i {
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
+        /* FEEDBACK MODAL */
+        .feedback-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 3000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(3px);
+        }
+        
+        .feedback-modal {
+            background: #2c2c2c;
+            border: 2px solid #555;
+            padding: 25px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-radius: 6px;
+        }
 
-    /***************************************
-     *               Buttons               *
-     ***************************************/
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      padding: 16px 24px;
-      margin: 12px 0;
-      font-size: 1.08rem;
-      font-weight: 600;
-      color: white;
-      background: var(--accent);
-      border: none;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-    }
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
 
-    .btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
-    }
+        .feedback-title {
+            color: #ffaa00;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            text-shadow: 2px 2px 0 #000;
+        }
 
-    .btn:hover::after {
-      transform: translateX(100%);
-    }
+        .feedback-close {
+            background: #ff5555;
+            border: 2px solid #8e4040;
+            color: white;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,136,204,0.35);
-    }
+        .feedback-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: left;
+        }
 
-    .btn.tg       { background: var(--accent); }
-    .btn.tg:hover { background: var(--accent-hover); }
+        .feedback-label {
+            font-size: 10px;
+            color: #aaa;
+            font-family: 'Press Start 2P', cursive; /* UPDATED: PIXEL FONT */
+            margin-left: 2px;
+            line-height: 1.5;
+        }
 
-    .btn.whatsapp       { background: var(--whatsapp); }
-    .btn.whatsapp:hover { background: var(--whatsapp-hover); }
+        .feedback-input, .feedback-textarea {
+            background: #1a1a1a;
+            border: 2px solid #444;
+            color: white;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive; /* UPDATED: PIXEL FONT */
+            font-size: 10px; /* Smaller font size for pixel font legibility */
+            border-radius: 4px;
+            outline: none;
+            line-height: 1.5;
+        }
+        
+        .feedback-input:focus, .feedback-textarea:focus {
+            border-color: var(--mc-green);
+        }
 
-    .btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
+        .feedback-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
 
-    /***************************************
-     *            Progress Bar             *
-     ***************************************/
-    .progress-container {
-      display: none;
-      margin-top: 12px;
-      text-align: center;
-    }
+        /* CUSTOM SELECT (REPLACES NATIVE DROPDOWN) */
+        .custom-select-wrapper {
+            position: relative;
+            user-select: none;
+            width: 100%;
+        }
+        
+        .custom-select-trigger {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1a1a1a;
+            border: 2px solid #444;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        
+        .custom-select-trigger:hover {
+            border-color: #666;
+        }
+        
+        .custom-select-trigger .arrow {
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #888;
+            margin-left: 10px;
+        }
+        
+        .custom-options {
+            position: absolute;
+            display: block;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #222;
+            border: 2px solid #444;
+            border-top: none;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+        }
+        
+        .custom-select-wrapper.open .custom-options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transform: translateY(0);
+        }
+        
+        .custom-select-wrapper.open .custom-select-trigger {
+            border-color: var(--mc-green);
+            border-bottom-color: #222;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .custom-option {
+            position: relative;
+            display: block;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+        
+        .custom-option:hover {
+            background-color: #333;
+            color: var(--mc-green);
+        }
+        
+        .custom-option.selected {
+            background-color: #2a2a2a;
+            color: #fff;
+        }
 
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background: var(--progress-bg);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      position: relative;
-    }
+        .feedback-submit {
+            background: var(--mc-blue);
+            color: #000;
+            border: 2px solid #3388dd;
+            padding: 12px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
 
-    .progress-fill {
-      width: 0;
-      height: 100%;
-      background: var(--progress-fill);
-      transition: width 15s linear;
-    }
+        .feedback-submit:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
 
-    .progress-text {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
+        /* ==================== SKELETON LOADING ==================== */
+        .skeleton {
+            background: #3a3a3a; background: linear-gradient(90deg, #3a3a3a 25%, #4a4a4a 50%, #3a3a3a 75%);
+            background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; border-radius: 4px;
+        }
+        @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        .skeleton-card { background: #333; padding: 15px; border-radius: 5px; border: 2px solid #444; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); height: 100%; }
+        .skeleton-img { width: 100%; aspect-ratio: 16/9; border-radius: 5px; }
+        .skeleton-title { height: 20px; width: 70%; }
+        .skeleton-stars { height: 15px; width: 50%; }
+        .skeleton-text { height: 12px; width: 100%; }
+        .skeleton-text.short { width: 60%; }
+        .skeleton-btn-group { display: flex; gap: 10px; margin-top: auto; }
+        .skeleton-btn { height: 35px; width: 100%; border-radius: 0; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    /***************************************
-     *           Ads & Footer              *
-     ***************************************/
-    .ads-container {
-      width: 100%;
-      max-width: 520px;
-      margin: 24px auto;
-      text-align: center;
-    }
+        /* ==================== FOOTER & OTHER ==================== */
+        footer { 
+            padding: 2rem; 
+            margin-top: 3rem; 
+            border-top: 4px solid var(--mc-border); 
+            background: rgba(0,0,0,0.9); 
+            font-size: 14px; 
+            display: flex; 
+            justify-content: center; /* Centered without bedrock */
+            align-items: center; 
+            text-align: center; 
+            position: relative;
+            z-index: 10;
+        }
+        footer a { color: var(--mc-green); }
+        
+        .footer-text { width: 100%; text-align: center; }
 
-    .ads-container iframe {
-      border: none;
-      margin: 12px auto;
-      display: block;
-    }
+        @media (max-width: 768px) {
+            .navbar-menu { display: none; }
+            .mobile-nav-icons { display: flex; }
+            .mod-item { width: 100%; max-width: 400px; }
+            footer { flex-direction: column; text-align: center !important; gap: 20px; font-size: 10px; }
+            
+            /* UPDATED: MOBILE LAYOUT FOR FILTERS */
+            .filter-container {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch; /* Make items full width */
+            }
+            
+            .game-btn-link, .sort-dropdown, .sort-button {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box; /* Ensure padding doesn't break width */
+            }
+        }
+        @media (min-width: 769px) {
+            .navbar-menu { display: flex !important; }
+        }
 
-    footer {
-      padding: 40px 20px 60px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      border-top: 1px solid var(--border);
-      margin-top: auto;
-    }
+        /* ==================== FIXED FLOATING BUTTONS (BLOCKY STYLE) ==================== */
+        /* UPDATED: ENSURING EXACT SAME SIZE */
+        #biomeToggle, #menuTrigger {
+            position: fixed;
+            width: 50px;  /* Slightly larger explicit width */
+            height: 50px; /* Explicit height */
+            background-color: #3a3a3a;
+            color: #fff;
+            border: 2px solid #555;
+            border-radius: 4px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 0 #222;
+            transition: transform 0.1s, box-shadow 0.1s, background-color 0.2s;
+            box-sizing: border-box; /* Ensures border is included in 50px */
+            padding: 0; /* Remove potential default padding */
+        }
+        
+        #biomeToggle {
+            bottom: 20px;
+            right: 20px;
+            color: var(--mc-green);
+        }
 
-    @media (max-width: 480px) {
-      .logo        { font-size: 3.2rem; }
-      .card        { padding: 24px 18px; }
-      .btn         { padding: 14px 20px; font-size: 1.02rem; }
-    }
+        #menuTrigger {
+            bottom: 80px; /* Sits above biome toggle */
+            right: 20px;
+            color: white;
+            display: flex; 
+        }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        transition: none !important;
-        animation: none !important;
-      }
-    }
-  </style>
+        #biomeToggle:hover, #menuTrigger:hover {
+            transform: translateY(-2px);
+            background-color: #444;
+            box-shadow: 0 6px 0 #222;
+        }
+
+        #biomeToggle:active, #menuTrigger:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #222;
+        }
+        
+        /* ==================== IMPROVED SITE INDEX OVERLAY ==================== */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85); /* Darker dim */
+            backdrop-filter: blur(5px); /* Blur effect behind menu */
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu-container {
+            background-color: #2c2c2c;
+            border: 2px solid #777;
+            padding: 20px;
+            width: 80%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .mobile-menu-overlay.active .mobile-menu-container {
+            transform: scale(1);
+        }
+        
+        .mobile-menu-header {
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-menu-title {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--mc-green);
+            font-size: 16px;
+            text-shadow: 2px 2px 0 #000;
+        }
+        
+        .mobile-menu-close {
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #555;
+            background: #3a3a3a;
+            box-shadow: 0 2px 0 #222;
+        }
+
+        .mobile-menu-close:hover { background: #ff5555; border-color: #ff5555; }
+        .mobile-menu-close:active { transform: translateY(2px); box-shadow: none; }
+
+        .mobile-menu-item {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            background-color: #3a3a3a;
+            border: 2px solid #555;
+            text-align: center;
+            transition: all 0.1s;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #222;
+            text-transform: uppercase;
+            display: block; /* Added to support <a> tags */
+        }
+        
+        .mobile-menu-item:hover {
+            background-color: #444;
+            color: var(--mc-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #222;
+        }
+
+        .mobile-menu-item:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #222;
+        }
+
+        .menu-footer {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 10px;
+            color: #888;
+        }
+
+    </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2P94THH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <audio id="clickSound" src="assets/sounds/pop.mp3" preload="auto"></audio>
+    <audio id="creeperSound" src="assets/sounds/creeper.mp3" preload="auto"></audio>
 
-  <div class="page-wrapper">
+    <!-- FEEDBACK FORM MODAL -->
+    <div id="feedbackOverlay" class="feedback-overlay">
+        <div class="feedback-modal">
+            <div class="feedback-header">
+                <span class="feedback-title">Submit Feedback</span>
+                <div id="feedbackClose" class="feedback-close">✕</div>
+            </div>
+            
+            <div class="feedback-form-group">
+                <label class="feedback-label">Addon Name</label>
+                <input type="text" id="feedbackAddonName" class="feedback-input" readonly>
+            </div>
+            
+            <div class="feedback-form-group">
+                <label class="feedback-label">Type</label>
+                
+                <!-- REPLACED NATIVE SELECT WITH CUSTOM DROPDOWN -->
+                <div class="custom-select-wrapper" id="feedbackTypeSelect">
+                    <div class="custom-select-trigger">
+                        <span>🐛 Bug Report</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                        <span class="custom-option selected" data-value="Bug Report">🐛 Bug Report</span>
+                        <span class="custom-option" data-value="Suggestion">💡 Suggestion</span>
+                        <span class="custom-option" data-value="Comment">💬 Comment</span>
+                        <span class="custom-option" data-value="Other">❓ Other</span>
+                    </div>
+                </div>
+                <input type="hidden" id="feedbackType" value="Bug Report"> <!-- Hidden input to store value -->
+            </div>
 
-    <!-- إعلان علوي -->
-    <div class="ads-container">
-      <script>
-        atOptions = {
-          'key' : '75cd5e90b6fd55d5ddca93d86a7dd4fb',
-          'format' : 'iframe',
-          'height' : 300,
-          'width' : 160,
-          'params' : {}
-        };
-      </script>
-      <script src="https://arableillnesspersonnel.com/75cd5e90b6fd55d5ddca93d86a7dd4fb/invoke.js"></script>
+            <div class="feedback-form-group">
+                <label class="feedback-label">Your Message</label>
+                <textarea id="feedbackMessage" class="feedback-textarea" placeholder="Describe the issue or your idea..."></textarea>
+            </div>
+
+            <button id="feedbackSubmit" class="feedback-submit">Send to Developer</button>
+        </div>
     </div>
 
-    <main class="main-content">
-
-      <header class="header">
-        <div class="logo">TEAM ABN</div>
-        <p class="tagline">اهلاً بك في الصفحة الرسمية</p>
-      </header>
-
-      <!-- قسم القناة -->
-      <section class="card">
-        <h2 class="card-title">
-          <i class="fab fa-telegram-plane"></i>
-          القناة الرسمية
-        </h2>
-        <button class="btn tg" data-deep="tg://resolve/?domain=ABN_MOD" data-fallback="https://t.me/ABN_MOD" aria-label="الانضمام إلى قناة تليجرام">
-          <i class="fab fa-telegram-plane"></i>
-          الانضمام إلى القناة
-        </button>
-        <div class="progress-container" id="progress-channel">
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-          </div>
-          <p class="progress-text">جاري التحويل...</p>
+    <!-- MAIN WRAPPER -->
+    <div id="main-wrapper">
+        <div id="weatherRain" class="weather-layer weather-rain"></div>
+        <div id="weatherAsh" class="weather-layer weather-ash"></div>
+        <div id="weatherEnd" class="weather-layer weather-end"></div>
+        
+        <!-- IMPROVED MENU OVERLAY -->
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <div class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <span class="mobile-menu-title">SITE INDEX</span>
+                    <div id="mobileMenuClose" class="mobile-menu-close">✕</div>
+                </div>
+                
+                <div class="mobile-menu-item" data-target="projects">
+                    <i class="fas fa-scroll"></i> PROJECTS
+                </div>
+                <div class="mobile-menu-item" data-target="social">
+                    <i class="fas fa-users"></i> SOCIAL
+                </div>
+                <div class="mobile-menu-item" data-target="news">
+                    <i class="fas fa-newspaper"></i> NEWS
+                </div>
+                <!-- ADDED: NEW LINK TO OTHER ADDONS -->
+                <a href="https://amarshted123-del.github.io/other-addons.html" class="mobile-menu-item">
+                    <i class="fas fa-cubes"></i> OTHER ADDONS
+                </a>
+                
+                <div class="menu-footer">
+                    Select a destination
+                </div>
+            </div>
         </div>
-      </section>
 
-      <!-- قسم التواصل -->
-      <section class="card">
-        <h2 class="card-title">
-          <i class="fas fa-headset"></i>
-          تواصل مع المطور
-        </h2>
-        <button class="btn tg" data-deep="tg://resolve/?domain=ABN_AM_Ar" data-fallback="https://t.me/ABN_AM_Ar" aria-label="مراسلة على تليجرام">
-          <i class="fab fa-telegram-plane"></i>
-          تليجرام
-        </button>
-        <div class="progress-container" id="progress-tg">
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-          </div>
-          <p class="progress-text">جاري التحويل...</p>
+        <nav class="minecraft-navbar">
+            <div class="navbar-logo">
+                <img src="assets/images/avatarHead3.png" alt="shadowGamer100k" class="nav-logo">
+                <span class="logo-text">Projects</span>
+                <span id="splashText" class="splash-text">Minecraft!</span>
+            </div>
+            <!-- Standard Desktop Nav -->
+            <div class="navbar-menu">
+                <button class="nav-item active" data-target="projects">PROJECTS</button>
+                <button class="nav-item" data-target="social">SOCIAL</button>
+                <button class="nav-item" data-target="news">NEWS</button>
+                <!-- ADDED: NEW LINK TO OTHER ADDONS -->
+                <a href="https://amarshted123-del.github.io/other-addons.html" class="nav-item">OTHER ADDONS</a>
+            </div>
+        </nav>
+        
+        <!-- ADSTERRA 728x90 HEADER BANNER -->
+        <div style="text-align: center; margin: 20px auto; max-width: 100%; overflow: hidden;">
+            <script type="text/javascript">
+            atOptions = {
+                'key' : '1c052379eaa4f622ad59cae13d01ed4f',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/1c052379eaa4f622ad59cae13d01ed4f/invoke.js"></script>
         </div>
-        <button class="btn whatsapp" data-deep="whatsapp://send?phone=963982718857" data-fallback="https://wa.me/963982718857" aria-label="مراسلة على واتساب">
-          <i class="fab fa-whatsapp"></i>
-          واتساب
-        </button>
-        <div class="progress-container" id="progress-wa">
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-          </div>
-          <p class="progress-text">جاري التحويل...</p>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for addons...">
+                <button id="clearSearch" class="clear-search">✕</button>
+            </div>
+            <!-- Results Container (Now styled!) -->
+            <div id="searchResults" class="search-results"></div>
         </div>
-      </section>
+        
+        <div class="container">
+            <div id="projects" class="tab-content active">
+                
+                <!-- FILTER & GAME BUTTON CONTAINER -->
+                <div class="filter-container">
+                    <a href="minigames/chicken_game.html" class="game-btn-link" title="Play Endless Chicken Runner!">
+                        <i class="fas fa-gamepad"></i> <span>MINI GAME</span>
+                    </a>
 
-    </main>
+                    <div class="sort-dropdown">
+                        <button class="sort-button" id="sortButton">
+                            <i class="fas fa-fire"></i> Sort: <span id="currentSortText">Trending</span>
+                        </button>
+                        <div class="sort-options" id="sortOptions">
+                            <div class="sort-option" data-sort="trending"><i class="fas fa-fire"></i> Trending</div>
+                            <div class="sort-option" data-sort="newest"><i class="fas fa-star"></i> Newest</div>
+                            <div class="sort-option" data-sort="popular"><i class="fas fa-download"></i> Popular</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="mod-list" id="projectModList">
+                    <!-- Updated items with feedback buttons -->
+               <li id='AutoSwap' class="mod-item" data-downloads="1000" data-date="2024-11-28">
+                    <img src="assets/images/postsImages/AutoSwap.webp" alt="Auto Tool Swap">
+                    <h3>Auto Tool Swap <span class="version-badge">1.21.130</span></h3>
+                    <div class="rating-container" data-mod-id="AutoSwap">
+                        <div class="stars-wrapper">
+                            <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                        </div>
+                        <span class="rating-score">Rate this!</span>
+                    </div>
+                    <p>swap tools in auto mode.</p>
+                    <div class="action-buttons">
+                        <a href="https://amarshted123-del.github.io/posts/AutoSwap.html" target="_blank" class="social-link">Download</a>
+                        <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                    </div>
+                </li>
+                    <li id='LinkedInventories' class="mod-item" data-downloads="1000" data-date="2024-11-28">
+                    <img src="assets/images/postsImages/LinkedInventories.webp" alt="Linked Inventories">
+                    <h3>Linked Inventories <span class="version-badge">1.21.130</span></h3>
+                    <div class="rating-container" data-mod-id="LinkedInventories">
+                        <div class="stars-wrapper">
+                            <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                        </div>
+                        <span class="rating-score">Rate this!</span>
+                    </div>
+                    <p>Real-time shared storage script to link inventories/chests.</p>
+                    <div class="action-buttons">
+                        <a href="https://amarshted123-del.github.io/posts/linked-inventories.html" target="_blank" class="social-link">Download</a>
+                        <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                    </div>
+                </li>
 
-    <!-- إعلان سفلي -->
-    <div class="ads-container">
-      <script>
-        atOptions = {
-          'key' : '071934287950dfd7635ecb479197b7f8',
-          'format' : 'iframe',
-          'height' : 60,
-          'width' : 468,
-          'params' : {}
-        };
-      </script>
-      <script src="https://arableillnesspersonnel.com/071934287950dfd7635ecb479197b7f8/invoke.js"></script>
+                     <li id='overstack' class="mod-item" data-downloads="15000" data-date="2025-12-4">
+                        <img src="assets/images/postsImages/overstack.webp" alt="overstack">
+                        <h3>OverStack add-on <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="QuickPortItems">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Break the 64 stack limite.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/StackRegulator.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <!-- ADSTERRA NATIVE BANNER BLOCK -->
+                    <li class="mod-item" style="background: #222; border: 2px solid var(--mc-gold); display: flex; align-items: center; justify-content: center; min-height: 300px; padding: 0;">
+                        <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                           <script async="async" data-cfasync="false" src="//pl28204793.effectivegatecpm.com/f44aa8675141ce4eb20c3eb9381c77b5/invoke.js"></script>
+                           <div id="container-f44aa8675141ce4eb20c3eb9381c77b5"></div>
+                        </div>
+                    </li>
+                    
+                    <li id='QuickPortItems' class="mod-item" data-downloads="15000" data-date="2025-05-15">
+                        <img src="assets/images/postsImages/QuickPortItems.webp" alt="QuickPortItems">
+                        <h3>QuickPort Items <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="QuickPortItems">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Automate item transfer between chests instantly.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/QuickPortItems.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+                    
+                    <li id='instantTeleport' class="mod-item" data-downloads="8000" data-date="2025-05-01">
+                        <img src="assets/images/postsImages/instantTeleport.webp" alt="instantTeleport">
+                        <h3>Instant Teleport <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="instantTeleport">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Teleport anywhere instantly with style.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/instantTeleport.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='handyCrafting' class="mod-item" data-downloads="4000" data-date="2025-04-20">
+                        <img src="assets/images/postsImages/handyCrafting.webp" alt="handyCrafting">
+                        <h3>Handy Crafting <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="handyCrafting">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Carry crafting tables as items and open them anywhere!</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/handyCrafting.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='chainedHearts' class="mod-item" data-downloads="2500" data-date="2025-04-10">
+                        <img src="assets/images/postsImages/chainedHearts.webp" alt="chainedHearts">
+                        <h3>Chained Hearts <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="chainedHearts">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Link your hearts with a friend, share damage and healing.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/linkedHearts.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='souleggs' class="mod-item" data-downloads="10000" data-date="2025-03-25">
+                        <img src="assets/images/postsImages/souleggs.webp" alt="souleggs">
+                        <h3>Soul Eggs <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="souleggs">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Catch and collect mobs just like Pokémon.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/soulEggs.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='mobHider' class="mod-item" data-downloads="3000" data-date="2025-03-15">
+                        <img src="assets/images/postsImages/MobHider.webp" alt="mobHider">
+                        <h3>Mob Hider <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="mobHider">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Hide inside any mob to troll your friends.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/mobHider.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='enderGuardian' class="mod-item" data-downloads="1200" data-date="2025-03-05"> 
+                        <img src="assets/images/postsImages/enderGuardian.webp" alt="enderGuardian">
+                        <h3>Ender Guardian <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="enderGuardian">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Saves your life when in battle or dying in silly ways.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/enderGuardian.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='pocketwaypoint' class="mod-item" data-downloads="7000" data-date="2025-02-20"> 
+                        <img src="assets/images/pocketwaypoint.webp" alt="pocketwaypoint">
+                        <h3>Pocket Waypoint <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="pocketwaypoint">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Save locations and teleport easily.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/pocketwaypoint.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='wirlesshopper' class="mod-item" data-downloads="12000" data-date="2025-02-10"> 
+                        <img src="assets/images/hopper.webp" alt="wirlesshopper">
+                        <h3>Wireless Hopper <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="wirlesshopper">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>No more cluttered hoppers and complex redstone.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/wirlessHopper.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='advancedwaypoint' class="mod-item" data-downloads="1500" data-date="2025-02-01"> 
+                        <img src="assets/images/waypoint.webp" alt="Advanced Waypoint">
+                        <h3>Advanced Waypoint <span class="version-badge">1.21.70</span></h3>
+                        <div class="rating-container" data-mod-id="advancedwaypoint">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Return home from great distances easily.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/advancedwaypoint.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='landclaim' class="mod-item" data-downloads="900" data-date="2025-01-25"> 
+                        <img src="assets/images/landClaim.webp" alt="Land Claim">
+                        <h3>Land Claim <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="landclaim">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Protect your areas from other players.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/landclaim.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+            
+                    <li id='itemcarrier' class="mod-item" data-downloads="500" data-date="2025-01-15"> 
+                        <img src="assets/images/ItemsCarrier.webp" alt="Items Carrier">
+                        <h3>Items Carrier <span class="version-badge">1.21.70</span></h3>
+                        <div class="rating-container" data-mod-id="itemcarrier">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Move items from one chest to another.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/itemcarrier.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+            
+                    <li id='healthbar' class="mod-item" data-downloads="1100" data-date="2025-01-05">
+                        <img src="assets/images/HealthBar.webp" alt="Health Bar">
+                        <h3>Health Bar <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="healthbar">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Show a heart counter for monsters and mobs.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/healthbar.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+
+                    <li id='mobcatcher' class="mod-item" data-downloads="2000" data-date="2025-01-01"> 
+                        <img src="assets/images/MobCatcher.webp" alt="Mob Catcher">
+                        <h3>Mob Catcher <span class="version-badge">1.21.130</span></h3>
+                        <div class="rating-container" data-mod-id="mobcatcher">
+                            <div class="stars-wrapper">
+                                <i class="fas fa-star star-btn" data-value="5"></i><i class="fas fa-star star-btn" data-value="4"></i><i class="fas fa-star star-btn" data-value="3"></i><i class="fas fa-star star-btn" data-value="2"></i><i class="fas fa-star star-btn" data-value="1"></i>
+                            </div>
+                            <span class="rating-score">Rate this!</span>
+                        </div>
+                        <p>Help you move monsters and mobs easily.</p>
+                        <div class="action-buttons">
+                            <a href="https://amarshted123-del.github.io/posts/mobcatcher.html" target="_blank" class="social-link">Download</a>
+                            <button class="feedback-btn" title="Report Bug / Feedback"><i class="fas fa-comment-dots"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="social" class="tab-content">
+                <ul class="mod-list">
+                    <li class="mod-item social-item">
+                        <img src="assets/images/youtube.png" alt="YouTube">
+                        <h3>YouTube <span class="social-badge">Videos</span></h3>
+                        <p>Watch our tutorials</p>
+                        <a href="https://www.youtube.com/@shadowgamer100k" target="_blank" class="social-link">Visit Channel</a>
+                    </li>
+                    <li class="mod-item social-item">
+                        <img src="assets/images/discord.png" alt="Discord">
+                        <h3>Discord <span class="social-badge">Community</span></h3>
+                        <p>Join our server</p>
+                        <a href="http://bit.ly/4fUVc9H" target="_blank" class="social-link">Join Server</a>
+                    </li>
+                    <li class="mod-item social-item">
+                        <img src="assets/images/paypal.png" alt="PayPal">
+                        <h3>PayPal <span class="social-badge">Support</span></h3>
+                        <p>Support the creator</p>
+                        <a href="https://paypal.me/shadowgamer100k?country.x=MA&locale.x=ar_EG" target="_blank" class="social-link">Donate</a>
+                    </li>
+                    <li class="mod-item social-item">
+                        <img src="assets/images/coffe.png" alt="Buy me a Coffee">
+                        <h3>Buy me a Coffee <span class="social-badge">Support</span></h3>
+                        <p>Buy me a Coffee</p>
+                        <a href="https://buymeacoffee.com/shadowjamak" target="_blank" class="social-link">Donate</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="news" class="tab-content">
+                <ul class="mod-list">
+                    <li class="mod-item news-item">
+                        <img src="assets/images/news.png" alt="Addon Updates">
+                        <h3>Addon Updates <span class="news-badge">Update</span></h3>
+                        <span class="news-date">13 Feb 2025</span>
+                        <p>All addons updated to 1.21.60 except advanced shop.</p>
+                    </li>
+                    <li class="mod-item news-item">
+                        <img src="assets/images/news.png" alt="Official Website Launch">
+                        <h3>Website Launch <span class="news-badge">New</span></h3>
+                        <span class="news-date">3 Feb 2025</span>
+                        <p>Today is the first day of the site's creation.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-text">
+                <p>&copy; 2025 shadowGamer12k. All rights reserved.</p>
+                <p style="margin-top: 5px;">
+                    <a href="https://amarshted123-del.github.io/legal/privacy-policy.html" target="_blank">Privacy</a> | 
+                    <a href="https://amarshted123-del.github.io/legal/terms-of-use.html" target="_blank">Terms</a>
+                </p>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-      <p>© 2024–2026 TEAM ABN • جميع الحقوق محفوظة</p>
-      <p style="margin-top:8px; font-size:0.85rem; opacity:0.7;">
-        هذه الصفحة تحتوي على روابط خارجية • يرجى التحقق من مصداقية المحتوى
-      </p>
-    </footer>
+    <!-- FIXED: BIOME BUTTON POSITIONING -->
+    <button id="biomeToggle" data-biome="Overworld">
+        <i class="fas fa-tree" id="biomeIcon"></i>
+    </button>
 
-  </div>
+    <!-- FIXED: MENU TRIGGER BUTTON POSITIONING -->
+    <div id="menuTrigger">
+        <i class="fas fa-bars" style="font-size: 20px;"></i>
+    </div>
 
-  <script>
-    // ────────────────────────────────────────────────
-    // Progress Bar Logic for Each Button
-    // ────────────────────────────────────────────────
-    document.querySelectorAll('.btn[data-deep]').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const deepLink = this.getAttribute('data-deep');
-        const fallback = this.getAttribute('data-fallback');
-        const progressId = this.nextElementSibling.id; // Assuming progress is right after button
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const clickSound = document.getElementById('clickSound');
+            const playClickSound = async () => {
+                if(clickSound) {
+                    clickSound.currentTime = 0;
+                    try { await clickSound.play(); } catch (e) {}
+                }
+            };
 
-        // Disable button
-        this.disabled = true;
+            const splashTexts = [
+                "Creeper? Aww man!", "Also try Terraria!", "100% Bug Free!", "Follow shadowGamer!", "Don't dig straight down!",
+                "Herobrine Removed", "Check out the addons!", "Made with <3!", "Splashing!", "Sub to the channel!",
+                "Better than Bedrock?", "Now with Ray Tracing! (JK)", "Press Alt+F4 for diamonds!", "Blocky goodness!",
+                "Pixel perfect!", "Zombie proof!", "Enderman friendly!", "Not a scam!", "Download now!", "Rated 5 Stars!"
+            ];
 
-        // Show progress bar
-        const progressContainer = document.getElementById(progressId);
-        progressContainer.style.display = 'block';
+            const splashElement = document.getElementById('splashText');
+            if (splashElement) {
+                const randomSplash = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+                splashElement.textContent = randomSplash;
+                
+                splashElement.addEventListener('click', () => {
+                    splashElement.style.transform = "rotate(-20deg) scale(1.2)";
+                    playClickSound();
+                    setTimeout(() => {
+                        splashElement.textContent = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+                        splashElement.style.transform = "rotate(-20deg) scale(1)";
+                    }, 150);
+                });
+            }
 
-        const progressFill = progressContainer.querySelector('.progress-fill');
-        progressFill.style.width = '100%'; // Start animation
+            document.addEventListener('click', (e) => {
+                createClickParticles(e.clientX, e.clientY);
+            });
 
-        // After 15 seconds, attempt deep link
-        setTimeout(() => {
-          // Try deep link (opens app if installed)
-          window.location.href = deepLink;
+            function createClickParticles(x, y) {
+                const particleCount = 5;
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('click-particle');
+                    document.body.appendChild(particle);
+                    particle.style.left = `${x}px`;
+                    particle.style.top = `${y}px`;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 30 + 10;
+                    const dx = Math.cos(angle) * speed;
+                    const dy = Math.sin(angle) * speed;
+                    requestAnimationFrame(() => {
+                        particle.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
+                        particle.style.opacity = '0';
+                    });
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 600);
+                }
+            }
 
-          // Fallback to web after 2 seconds if deep link fails (optional timeout)
-          setTimeout(() => {
-            window.location.href = fallback;
-          }, 2000);
-        }, 15000);
-      });
-    });
-  </script>
+            const projectModList = document.getElementById('projectModList');
+            const realItems = Array.from(projectModList.children);
+            realItems.forEach(item => item.style.display = 'none');
+            for(let i=0; i<6; i++) {
+                const li = document.createElement('li');
+                li.className = 'mod-item skeleton-placeholder'; 
+                li.style.pointerEvents = 'none';
+                li.innerHTML = `
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-img"></div>
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-stars"></div>
+                        <div class="skeleton skeleton-text"></div>
+                        <div class="skeleton skeleton-text short"></div>
+                        <div class="skeleton-btn-group">
+                             <div class="skeleton skeleton-btn"></div>
+                             <div class="skeleton skeleton-btn" style="width:50px"></div>
+                        </div>
+                    </div>
+                `;
+                projectModList.appendChild(li);
+            }
+            setTimeout(() => {
+                document.querySelectorAll('.skeleton-placeholder').forEach(el => el.remove());
+                realItems.forEach((item, index) => {
+                    item.style.display = 'flex';
+                    item.style.opacity = '0';
+                    item.style.animation = `fadeIn 0.5s ease-in forwards ${index * 0.05}s`;
+                });
+            }, 1500);
+
+            const allNavItems = document.querySelectorAll('.nav-item, .nav-icon');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const logoText = document.querySelector('.logo-text');
+
+            allNavItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    playClickSound();
+                    const target = this.getAttribute('data-target');
+                    allNavItems.forEach(nav => nav.classList.remove('active'));
+                    document.querySelectorAll(`[data-target="${target}"]`).forEach(nav => nav.classList.add('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    const targetContent = document.getElementById(target);
+                    if (targetContent) targetContent.classList.add('active');
+                    if (logoText) {
+                        logoText.textContent = target.charAt(0).toUpperCase() + target.slice(1);
+                    }
+                });
+            });
+
+            // MENU OVERLAY LOGIC
+            const menuTrigger = document.getElementById('menuTrigger');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+
+            if (menuTrigger) {
+                menuTrigger.addEventListener('click', () => {
+                    playClickSound();
+                    mobileMenuOverlay.classList.add('active');
+                });
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', () => {
+                    playClickSound();
+                    mobileMenuOverlay.classList.remove('active');
+                });
+            }
+
+            mobileMenuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    playClickSound();
+                    const target = this.dataset.target;
+                    mobileMenuOverlay.classList.remove('active');
+                    // Trigger the existing logic for tab switching
+                    const correspondingNav = document.querySelector(`.nav-item[data-target="${target}"]`);
+                    if (correspondingNav) correspondingNav.click();
+                });
+            });
+
+            // --- FEEDBACK FORM LOGIC ---
+            const feedbackOverlay = document.getElementById('feedbackOverlay');
+            const feedbackClose = document.getElementById('feedbackClose');
+            const feedbackAddonName = document.getElementById('feedbackAddonName');
+            const feedbackSubmit = document.getElementById('feedbackSubmit');
+            const feedbackType = document.getElementById('feedbackType');
+            
+            // --- CUSTOM SELECT LOGIC ---
+            const customSelectWrapper = document.querySelector('.custom-select-wrapper');
+            if (customSelectWrapper) {
+                const trigger = customSelectWrapper.querySelector('.custom-select-trigger');
+                const options = customSelectWrapper.querySelectorAll('.custom-option');
+                const hiddenInput = document.getElementById('feedbackType');
+
+                // Toggle dropdown open
+                trigger.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent closing immediately
+                    playClickSound();
+                    customSelectWrapper.classList.toggle('open');
+                });
+
+                // Handle option selection
+                options.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        playClickSound();
+                        // Update trigger text
+                        const text = option.textContent;
+                        const value = option.dataset.value;
+                        
+                        trigger.querySelector('span').textContent = text;
+                        hiddenInput.value = value;
+                        
+                        // Update selected class
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        option.classList.add('selected');
+                        
+                        // Close dropdown
+                        customSelectWrapper.classList.remove('open');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!customSelectWrapper.contains(e.target)) {
+                        customSelectWrapper.classList.remove('open');
+                    }
+                });
+            }
+
+            // Open Modal
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.feedback-btn')) {
+                    e.preventDefault();
+                    playClickSound();
+                    const btn = e.target.closest('.feedback-btn');
+                    const item = btn.closest('.mod-item');
+                    const title = item.querySelector('h3').innerText.split(' 1.')[0].trim(); // Clean version number if needed
+                    
+                    feedbackAddonName.value = title;
+                    feedbackOverlay.style.display = 'flex';
+                }
+            });
+
+            // Close Modal
+            if (feedbackClose) {
+                feedbackClose.addEventListener('click', () => {
+                    playClickSound();
+                    feedbackOverlay.style.display = 'none';
+                });
+            }
+            
+            // Close when clicking outside (background overlay)
+            if (feedbackOverlay) {
+                feedbackOverlay.addEventListener('click', (e) => {
+                    if (e.target === feedbackOverlay) {
+                        feedbackOverlay.style.display = 'none';
+                    }
+                });
+            }
+
+            // Submit Feedback
+            if (feedbackSubmit) {
+                feedbackSubmit.addEventListener('click', async () => {
+                    playClickSound();
+                    const name = feedbackAddonName.value;
+                    const type = document.getElementById('feedbackType').value; // Use hidden input value
+                    const message = document.getElementById('feedbackMessage').value;
+                    
+                    if (!message.trim()) {
+                        alert("Please enter a message.");
+                        return;
+                    }
+
+                    const originalText = feedbackSubmit.innerText;
+                    feedbackSubmit.innerText = "Sending...";
+                    feedbackSubmit.disabled = true;
+
+                    const webhookURL = "https://discord.com/api/webhooks/1441830441530294404/LWfl3eEZrLIDbDjq_UQra9zCaoAYZwPxd-_1PZmryavCIGqWe_hfBkBGJn5q7B4E6G3S";
+
+                    const embed = {
+                        title: `New Feedback: ${type}`,
+                        color: type === "Bug Report" ? 16734296 : 5814783, // Red for bug, blue for others
+                        fields: [
+                            { name: "Addon", value: name, inline: true },
+                            { name: "Type", value: type, inline: true },
+                            { name: "Message", value: message }
+                        ],
+                        footer: { text: "Submitted via website" },
+                        timestamp: new Date().toISOString()
+                    };
+
+                    try {
+                        await fetch(webhookURL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ embeds: [embed] })
+                        });
+                        alert("Feedback sent successfully! Thank you.");
+                        feedbackOverlay.style.display = 'none';
+                        document.getElementById('feedbackMessage').value = ""; // Clear message
+                    } catch (error) {
+                        console.error(error);
+                        alert("Failed to send feedback. Please try again later.");
+                    } finally {
+                        feedbackSubmit.innerText = originalText;
+                        feedbackSubmit.disabled = false;
+                    }
+                });
+            }
+
+            const searchInput = document.getElementById('searchInput');
+            const clearSearch = document.getElementById('clearSearch');
+            const searchResults = document.getElementById('searchResults');
+            
+            // Logic to build search index safely (ignoring skeletons)
+            const addons = Array.from(document.querySelectorAll('#projectModList .mod-item:not(.skeleton-placeholder)')).map(item => {
+                const h3 = item.querySelector('h3');
+                const img = item.querySelector('img');
+                const link = item.querySelector('a');
+                const p = item.querySelector('p');
+                if (!h3 || !img || !link || !p) return null;
+                return {
+                    name: h3.firstChild ? h3.firstChild.textContent.trim() : h3.textContent.trim(),
+                    desc: p.textContent,
+                    img: img.src,
+                    link: link.href
+                };
+            }).filter(a => a !== null);
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value.toLowerCase().trim();
+                    if (query) {
+                        clearSearch.style.display = 'block';
+                        const filtered = addons.filter(a => a.name.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query));
+                        searchResults.innerHTML = filtered.length ? '' : '<div class="no-results">No addons found</div>';
+                        filtered.forEach(addon => {
+                            const div = document.createElement('div');
+                            div.className = 'search-result-item';
+                            div.innerHTML = `<img src="${addon.img}" class="search-result-img"><div class="search-result-info"><h4>${addon.name}</h4><p>${addon.desc}</p></div>`;
+                            div.addEventListener('click', () => window.location.href = addon.link);
+                            searchResults.appendChild(div);
+                        });
+                        searchResults.classList.add('active');
+                    } else {
+                        searchResults.classList.remove('active');
+                        clearSearch.style.display = 'none';
+                    }
+                });
+                clearSearch.addEventListener('click', () => {
+                    searchInput.value = '';
+                    clearSearch.style.display = 'none';
+                    searchResults.classList.remove('active');
+                });
+                
+                // Close search results when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                        searchResults.classList.remove('active');
+                    }
+                });
+            }
+
+            const sortButton = document.getElementById('sortButton');
+            const sortOptions = document.getElementById('sortOptions');
+
+            if (sortButton && projectModList) {
+                sortButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    playClickSound();
+                    sortOptions.classList.toggle('show');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!sortButton.contains(e.target) && !sortOptions.contains(e.target)) sortOptions.classList.remove('show');
+                });
+                sortOptions.querySelectorAll('.sort-option').forEach(opt => {
+                    opt.addEventListener('click', function() {
+                        const type = this.dataset.sort;
+                        const items = Array.from(projectModList.children);
+                        items.sort((a, b) => {
+                            if (type === 'newest') return new Date(b.dataset.date) - new Date(a.dataset.date);
+                            if (type === 'popular') return (parseInt(b.dataset.downloads)||0) - (parseInt(a.dataset.downloads)||0);
+                            return 0;
+                        });
+                        projectModList.innerHTML = '';
+                        items.forEach(item => projectModList.appendChild(item));
+                        document.getElementById('currentSortText').textContent = this.textContent.trim();
+                        sortOptions.classList.remove('show');
+                    });
+                });
+            }
+
+            const biomeToggle = document.getElementById('biomeToggle');
+            const biomeIcon = document.getElementById('biomeIcon');
+            const weatherLayers = {
+                rain: document.getElementById('weatherRain'),
+                ash: document.getElementById('weatherAsh'),
+                end: document.getElementById('weatherEnd')
+            };
+            const biomes = [
+                { name: 'Overworld', class: '', icon: 'fa-tree' },
+                { name: 'The Nether', class: 'theme-nether', icon: 'fa-fire' },
+                { name: 'The End', class: 'theme-end', icon: 'fa-eye' }
+            ];
+            let currentBiomeIndex = parseInt(localStorage.getItem('selectedBiomeIndex')) || 0;
+            
+            function applyBiome(index) {
+                const biome = biomes[index];
+                document.body.classList.remove('theme-nether', 'theme-end');
+                if (biome.class) document.body.classList.add(biome.class);
+                if(biomeIcon && biomeToggle) {
+                    biomeIcon.className = `fas ${biome.icon}`;
+                    biomeToggle.setAttribute('data-biome', `Biome: ${biome.name}`);
+                }
+                Object.values(weatherLayers).forEach(layer => layer.style.display = 'none');
+                if (biome.name === 'Overworld') weatherLayers.rain.style.display = 'block';
+                else if (biome.name === 'The Nether') weatherLayers.ash.style.display = 'block';
+                else if (biome.name === 'The End') weatherLayers.end.style.display = 'block';
+                localStorage.setItem('selectedBiomeIndex', index);
+            }
+            applyBiome(currentBiomeIndex);
+
+            if (biomeToggle) {
+                biomeToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    playClickSound();
+                    currentBiomeIndex = (currentBiomeIndex + 1) % biomes.length;
+                    applyBiome(currentBiomeIndex);
+                });
+            }
+
+            function initRatingSystem() {
+                const ratingContainers = document.querySelectorAll('.rating-container');
+                ratingContainers.forEach(container => {
+                    const modId = container.dataset.modId;
+                    const scoreText = container.querySelector('.rating-score');
+                    const stars = container.querySelectorAll('.star-btn');
+                    const savedRating = localStorage.getItem(`rating_${modId}`);
+                    if (savedRating) {
+                        updateStars(stars, savedRating);
+                        scoreText.textContent = `You rated: ${savedRating}/5`;
+                    }
+                    stars.forEach(star => {
+                        star.addEventListener('click', function(e) {
+                            e.preventDefault(); e.stopPropagation(); playClickSound();
+                            const value = this.dataset.value;
+                            localStorage.setItem(`rating_${modId}`, value);
+                            updateStars(stars, value);
+                            scoreText.textContent = `You rated: ${value}/5`;
+                        });
+                    });
+                });
+            }
+            function updateStars(starNodeList, value) {
+                starNodeList.forEach(s => {
+                    if (parseInt(s.dataset.value) <= parseInt(value)) {
+                        s.classList.add('active'); s.classList.replace('far', 'fas');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            }
+            initRatingSystem();
+        });
+    </script>
+    
+    <!-- ADSTERRA SOCIAL BAR -->
+    <script type="text/javascript" src="//pl25818958.effectivegatecpm.com/e7/e5/9d/e7e59dd20cde20d805842c0f5d81b184.js"></script>
+  
 </body>
 </html>
+
